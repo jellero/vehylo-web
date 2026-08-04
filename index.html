@@ -13,6 +13,9 @@
     const binary = atob(pieces.join(''));
     const compressed = Uint8Array.from(binary, c => c.charCodeAt(0));
     setStatus('Verifica e decompressione…');
+    if (!crypto?.subtle) throw new Error('Verifica crittografica non disponibile');
+    const digest = Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256', compressed)), byte => byte.toString(16).padStart(2, '0')).join('');
+    if (digest !== '3f77df71cf1404602d060786b3fc79a638c43165d84568f53ea10aae8324d7fe') throw new Error('Integrità del sito non valida');
     if (!('DecompressionStream' in window)) throw new Error('Browser non compatibile con DecompressionStream');
     const stream = new Blob([compressed]).stream().pipeThrough(new DecompressionStream('gzip'));
     const tar = new Uint8Array(await new Response(stream).arrayBuffer());
