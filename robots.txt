@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://jellero.github.io/vehylo-web/sitemap.xml
