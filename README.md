@@ -1,27 +1,29 @@
 # Vehylo Web
 
-Sito di prodotto del progetto Vehylo, riprogettato con **Android Auto e Apple CarPlay al centro**.
+Sito di prodotto multipagina di Vehylo, progettato con **Android Auto e Apple CarPlay al centro**.
 
-## Struttura
+## Pagine
 
-- `index.html` — home, strategia display e prototipo interattivo Travel / Urban / Offroad / Vehicle;
-- `viaggio-urbano.html` — viaggio, autonomia, meteo, parcheggio, ZTL, segnaletica e context engine;
-- `offroad.html` — inclinometro BLE, camera sottoscocca, waypoint, modalità crawl e sicurezza;
-- `platform.html` — architettura Android/iOS, stato reale, roadmap e FAQ.
+- `index.html` — home e cockpit interattivo con Travel, Urban, Offroad, Web Radio, Voice e Alerts;
+- `viaggio-urbano.html` — viaggio, meteo, autonomia, parcheggio, restrizioni, segnaletica e audio contestuale;
+- `offroad.html` — inclinometro BLE, camera sottoscocca, waypoint, modalità crawl, voce e hardware;
+- `voice-media-integrations.html` — web radio, entertainment, alert engine, Vehylo Voice, richiesta integrazioni e SDK/API;
+- `platform.html` — Android Auto, Apple CarPlay, architettura, stato reale, sicurezza, roadmap e FAQ.
 
-## Principi di prodotto
+## Principi
 
-- esperienza principale progettata per il display dell’auto;
-- Android Auto tramite categorie e template della Android for Cars App Library;
-- Apple CarPlay tramite app iPhone, entitlement e template CarPlay;
-- companion Android e iOS per configurazione, mapping e diagnostica profonda;
-- Android Automotive OS, sistemi nativi o display dedicato per esperienze estese e video quando consentito;
-- distinzione esplicita tra funzioni disponibili, prossimo ciclo e ricerca;
-- nessun link pubblico diretto all’APK.
+- esperienza principale sul display dell’auto;
+- companion Android/iPhone per configurazione, mapping, diagnostica e calibrazione;
+- motore voce specializzato nel dominio veicolo e viaggio, senza promettere una hotword universale;
+- web radio e media coordinati con avvisi e comandi vocali;
+- integrazioni semplici per gli utenti e avanzate per terze parti;
+- scope espliciti, firma, sandbox, provenienza e read-only predefinito;
+- nessun link pubblico diretto all’APK;
+- distinzione tra disponibile, pianificato e ricerca.
 
 ## Tecnologia
 
-Sito statico multipagina in HTML, CSS e JavaScript, senza framework, loader runtime, chunk, decompressione o dipendenze esterne.
+HTML, CSS e JavaScript statici, senza framework, loader runtime, chunk o dipendenze esterne.
 
 ## Pubblicazione
 
