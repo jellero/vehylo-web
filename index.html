@@ -47,7 +47,11 @@
     };
     let html = text('index.html');
     html = html.replace('<link rel="stylesheet" href="styles.css">', `<style>${text('styles.css')}</style>`);
-    html = html.replace('<script src="script.js" defer></script>', `<script>${text('script.js').replace(/<\/script/gi, '<\\/script')}</script>`);
+    const scriptOpen = '<scr' + 'ipt>';
+    const scriptClose = '</scr' + 'ipt>';
+    const externalScript = '<scr' + 'ipt src="script.js" defer></scr' + 'ipt>';
+    const embeddedScript = scriptOpen + text('script.js').replace(/<\/script/gi, '<\\/script') + scriptClose;
+    html = html.replace(externalScript, embeddedScript);
     const logo = dataUrl('assets/logo-mark.svg', 'image/svg+xml');
     const cover = dataUrl('assets/og-cover.svg', 'image/svg+xml');
     html = html.replaceAll('assets/logo-mark.svg', logo).replaceAll('assets/og-cover.svg', cover);
