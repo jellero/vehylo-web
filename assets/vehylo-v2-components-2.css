@@ -1,0 +1,100 @@
+    .usecase-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .feature-card {
+      min-height: 265px;
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      background: linear-gradient(145deg, rgba(17, 30, 38, .92), rgba(8, 16, 21, .96));
+    }
+
+    .feature-icon {
+      width: 46px;
+      height: 46px;
+      display: grid;
+      place-items: center;
+      border: 1px solid #315367;
+      border-radius: 14px;
+      color: var(--blue);
+      background: #112531;
+      font-weight: 900;
+    }
+
+    .feature-card h3 { margin: 35px 0 10px; font-size: 21px; letter-spacing: -.025em; }
+    .feature-card p { color: var(--muted); font-size: 14px; }
+    .feature-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 18px; }
+    .feature-tags span { padding: 5px 8px; border: 1px solid #2b454f; border-radius: 999px; color: #a8bec7; background: #0c1a20; font-size: 10px; }
+
+    .hardware-layout {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 20px;
+      align-items: stretch;
+    }
+
+    .hardware-visual {
+      position: relative;
+      min-height: 540px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      background:
+        radial-gradient(circle at 50% 45%, rgba(40, 90, 75, .28), transparent 36%),
+        linear-gradient(145deg, #101e24, #070d10);
+    }
+
+    .car-silhouette {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 250px;
+      height: 410px;
+      border: 3px solid #6c858f;
+      border-radius: 72px 72px 48px 48px;
+      transform: translate(-50%, -50%);
+      background: linear-gradient(90deg, #15262e, #1a2e36 50%, #13242b);
+      box-shadow: inset 0 0 0 15px #0d181d, 0 30px 70px #0008;
+    }
+
+    .car-silhouette::before { content: ""; position: absolute; left: 39px; right: 39px; top: 51px; height: 105px; border: 2px solid #526b76; border-radius: 35px 35px 17px 17px; background: #0d171c; }
+    .car-silhouette::after { content: ""; position: absolute; left: 49px; right: 49px; bottom: 53px; height: 100px; border: 2px solid #526b76; border-radius: 17px 17px 35px 35px; background: #0d171c; }
+    .wheel { position: absolute; width: 22px; height: 78px; border-radius: 9px; background: #050708; border: 1px solid #34434a; }
+    .wheel.w1 { left: -18px; top: 73px; }
+    .wheel.w2 { right: -18px; top: 73px; }
+    .wheel.w3 { left: -18px; bottom: 73px; }
+    .wheel.w4 { right: -18px; bottom: 73px; }
+
+    .hardware-node {
+      position: absolute;
+      min-width: 155px;
+      padding: 12px;
+      border: 1px solid #355764;
+      border-radius: 15px;
+      background: rgba(10, 22, 28, .93);
+      box-shadow: 0 15px 40px #0007;
+    }
+    .hardware-node strong { display: block; font-size: 13px; }
+    .hardware-node span { color: var(--muted); font-size: 10px; }
+    .hardware-node::after { content: ""; position: absolute; height: 1px; background: #4f7b6d; }
+    .hardware-node.camera { left: 20px; bottom: 46px; }
+    .hardware-node.camera::after { left: 100%; top: 50%; width: 96px; transform: rotate(-20deg); transform-origin: left; }
+    .hardware-node.incline { right: 18px; top: 48px; }
+    .hardware-node.incline::after { right: 100%; top: 50%; width: 100px; transform: rotate(18deg); transform-origin: right; }
+    .hardware-node.obd { left: 22px; top: 60px; }
+    .hardware-node.obd::after { left: 100%; top: 50%; width: 85px; transform: rotate(15deg); transform-origin: left; }
+    .hardware-node.gps { right: 20px; bottom: 61px; }
+    .hardware-node.gps::after { right: 100%; top: 50%; width: 100px; transform: rotate(-16deg); transform-origin: right; }
+
+    .hardware-copy {
+      display: grid;
+      align-content: start;
+      gap: 12px;
+    }
+    .hardware-item { padding: 20px; border: 1px solid var(--line); border-radius: 18px; background: rgba(11, 22, 28, .82); }
+    .hardware-item strong { display: block; margin-bottom: 6px; }
+    .hardware-item p { margin-bottom: 0; color: var(--muted); font-size: 13px; }
+
