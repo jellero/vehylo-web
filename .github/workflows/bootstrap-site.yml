@@ -38,3 +38,5 @@ jobs:
           git add -A
           git commit -m "Build complete Vehylo website"
           git push origin HEAD:main
+
+# Re-triggered after workflow registration.
