@@ -1,30 +1,31 @@
 # Vehylo Web
 
-Sito ufficiale statico del progetto [Vehylo](https://github.com/jellero/Vehylo).
+Sito di prodotto del progetto Vehylo, riprogettato con **Android Auto al centro**.
 
-## Contenuti
+## Struttura
 
-- presentazione completa del prodotto;
-- mockup interattivi di dashboard, salute veicolo, Mapping Studio, Incident Recorder, garage ed EV;
-- simulazione Compatibility Scan;
-- architettura, sicurezza, roadmap, casi d'uso e modello economico proposto;
-- download diretto dell'APK debug 0.3.0;
-- pagine privacy, termini e sicurezza;
-- SEO, Open Graph, manifest PWA, sitemap e layout responsive;
-- workflow GitHub Pages.
+- `index.html` — home, strategia display e prototipo interattivo Travel / Urban / Offroad / Vehicle;
+- `viaggio-urbano.html` — viaggio, autonomia, meteo, parcheggio, ZTL, segnaletica e context engine;
+- `offroad.html` — inclinometro BLE, camera sottoscocca, waypoint, modalità crawl e sicurezza;
+- `platform.html` — architettura, stato reale delle funzioni, roadmap e FAQ.
+
+## Principi di prodotto
+
+- esperienza principale progettata per il display dell’auto;
+- uso di categorie e template Android Auto approvati;
+- companion Android per configurazione, mapping e diagnostica profonda;
+- Android Automotive OS o display dedicato per esperienze estese e video quando consentito;
+- distinzione esplicita tra funzioni disponibili, prossimo ciclo e ricerca;
+- nessun link pubblico diretto all’APK.
 
 ## Tecnologia
 
-HTML, CSS e JavaScript senza framework o dipendenze runtime. Il pacchetto completo del sito viene caricato dal repository e ricostruito nel browser dal file `index.html`.
+Sito statico multipagina in HTML, CSS e JavaScript, senza framework e senza loader runtime, chunk, decompressione o dipendenze esterne.
 
 ## Pubblicazione
 
-La workflow `.github/workflows/pages.yml` distribuisce il contenuto di `main` su GitHub Pages. Nelle impostazioni del repository, la sorgente Pages deve essere impostata su **GitHub Actions**.
-
-## Note
-
-Le interfacce rappresentano la direzione di prodotto. Il sito distingue le funzioni presenti nella versione 0.3.0 dalle funzioni pianificate.
+GitHub Pages distribuisce il contenuto del branch `main`.
 
 ## Licenza
 
-Apache-2.0, in coerenza con il progetto Android, salvo diversa indicazione.
+Apache-2.0, salvo diversa indicazione.
