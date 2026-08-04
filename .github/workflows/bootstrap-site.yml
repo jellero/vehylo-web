@@ -39,4 +39,4 @@ jobs:
           git commit -m "Build complete Vehylo website"
           git push origin HEAD:main
 
-# Re-triggered after workflow registration.
+# Triggered through a server-side merge event.
