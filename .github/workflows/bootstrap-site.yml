@@ -1,21 +1,22 @@
 name: Bootstrap Vehylo website
 
 on:
-  push:
+  pull_request_target:
     branches: [main]
-    paths:
-      - .github/workflows/bootstrap-site.yml
+    types: [opened]
 
 permissions:
   contents: write
 
 jobs:
   bootstrap:
+    if: github.repository == 'jellero/vehylo-web'
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
+      - name: Checkout trusted main branch
         uses: actions/checkout@v4
         with:
+          ref: main
           fetch-depth: 0
 
       - name: Reconstruct and verify website
@@ -38,5 +39,3 @@ jobs:
           git add -A
           git commit -m "Build complete Vehylo website"
           git push origin HEAD:main
-
-# Triggered through a server-side merge event.
