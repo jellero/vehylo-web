@@ -1,0 +1,67 @@
+<!doctype html><html lang="it" data-theme="dark"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#050a0d"><meta name="color-scheme" content="dark"><meta name="description" content="Vehylo: vehicle intelligence per Android Auto, viaggio, città e offroad."><title>Vehylo — Piattaforma Android Auto e roadmap</title><link rel="stylesheet" href="assets/vehylo-v2-base.css"><link rel="stylesheet" href="assets/vehylo-v2-components-1.css"><link rel="stylesheet" href="assets/vehylo-v2-components-2.css"><link rel="stylesheet" href="assets/vehylo-v2-components-3.css"><link rel="stylesheet" href="assets/vehylo-v2-components-4.css"></head><body><header class="topbar"><div class="container nav"><a class="brand" href="index.html"><span class="logo">V</span><span>Vehylo</span></a><nav class="navlinks" aria-label="Navigazione principale"><a href="index.html#esperienza">Esperienza</a><a href="viaggio-urbano.html">Viaggio e città</a><a href="offroad.html">Offroad e hardware</a><a href="platform.html">Piattaforma</a></nav><span class="nav-status"><span class="pulse"></span> Product concept in sviluppo</span><a class="menu-button" href="platform.html" aria-label="Apri sezioni">☰</a></div></header><main id="top"><section class="hero"><div class="container"><span class="eyebrow"><span class="pulse"></span>PLATFORM + ROADMAP</span><h1>Android Auto al centro,<br><span class="gradient-text">senza promesse false.</span></h1><p class="hero-copy">Categorie approvate, Car App Library, companion mobile e superfici estese per Android Automotive OS e display dedicati.</p><div class="hero-actions"><a class="button" href="index.html#esperienza">Apri il prototipo</a><a class="button secondary" href="platform.html">Strategia Android Auto</a></div></div></section><section class="section soft" id="architettura">
+<div class="container">
+<div class="section-heading">
+<div><span class="section-kicker">Architettura di prodotto</span><h2>Ogni dato entra una volta e serve più esperienze.</h2></div>
+<p>Un modello comune evita moduli isolati e permette di correlare strada, veicolo, sensori e cronologia.</p>
+</div>
+<div class="architecture">
+<div class="arch-column"><h3>Vehicle layer</h3><div class="arch-chip">OBD-II / ELM327</div><div class="arch-chip">CAN e profili OEM</div><div class="arch-chip">DTC e freeze frame</div><div class="arch-chip">Baseline e Vehicle Health</div></div>
+<div class="arch-column"><h3>Sensor layer</h3><div class="arch-chip">Inclinometro BLE</div><div class="arch-chip">GPS / IMU</div><div class="arch-chip">TPMS e sensori custom</div><div class="arch-chip">Camera Wi-Fi / USB / IP</div></div>
+<div class="arch-column"><h3>Context layer</h3><div class="arch-chip">Mappe e traffico</div><div class="arch-chip">Meteo di tratta</div><div class="arch-chip">POI e parcheggi</div><div class="arch-chip">Segnaletica e restrizioni</div></div>
+<div class="arch-column"><h3>Experience layer</h3><div class="arch-chip">Android Auto templates</div><div class="arch-chip">Android Automotive OS</div><div class="arch-chip">Display aftermarket</div><div class="arch-chip">Companion Android</div></div>
+</div>
+</div>
+</section><section class="section" id="stato">
+<div class="container">
+<div class="section-heading">
+<div><span class="section-kicker">Trasparenza</span><h2>Visione completa, stato dichiarato.</h2></div>
+<p>Il sito distingue ciò che esiste già nel progetto Android, ciò che entra nel prossimo ciclo e ciò che richiede ricerca o approvazione di piattaforma.</p>
+</div>
+<div class="matrix-wrap">
+<table class="matrix">
+<thead><tr><th>Area</th><th>Funzione</th><th>Stato</th><th>Superficie prevista</th><th>Nota</th></tr></thead>
+<tbody>
+<tr><td>Media</td><td>Web radio e media session</td><td><span class="status-pill now">Disponibile</span></td><td>Android Auto</td><td>Categoria media già prevista nel progetto.</td></tr>
+<tr><td>Veicolo</td><td>Telemetria OBD standard e dinamica</td><td><span class="status-pill now">Disponibile</span></td><td>Companion</td><td>La visualizzazione Android Auto richiede flussi compatibili con categorie approvate.</td></tr>
+<tr><td>Diagnostica</td><td>DTC read-only e profili mapping</td><td><span class="status-pill now">Disponibile</span></td><td>Companion</td><td>Configurazione e analisi restano fuori dalla guida.</td></tr>
+<tr><td>Android Auto</td><td>Shell Travel / Urban / Offroad</td><td><span class="status-pill next">Prossimo ciclo</span></td><td>Android Auto</td><td>Car App Library, template e test DHU.</td></tr>
+<tr><td>Contesto</td><td>POI, parcheggi, meteo e restrizioni</td><td><span class="status-pill next">Prossimo ciclo</span></td><td>Android Auto + companion</td><td>Dipende da provider, copertura e normative locali.</td></tr>
+<tr><td>Offroad</td><td>Inclinometro BLE esterno</td><td><span class="status-pill next">Prossimo ciclo</span></td><td>Auto + companion</td><td>Protocollo configurabile e calibrazione sul veicolo.</td></tr>
+<tr><td>Camera</td><td>Sottoscocca / cordolo con overlay</td><td><span class="status-pill research">Ricerca</span></td><td>AAOS / display dedicato / companion</td><td>Video sul display auto dipende dalle capacità e regole della piattaforma.</td></tr>
+<tr><td>Segnaletica</td><td>Riconoscimento camera on-device</td><td><span class="status-pill research">Ricerca</span></td><td>Companion + alert auto</td><td>Da validare per precisione, privacy e distrazione.</td></tr>
+<tr><td>OEM</td><td>Temperatura cambio, DPF, sterzo, 4x4</td><td><span class="status-pill research">Per profilo</span></td><td>Tutte</td><td>Non universale: richiede dati specifici del veicolo.</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</section><section class="section soft" id="roadmap">
+<div class="container">
+<div class="section-heading">
+<div><span class="section-kicker">Roadmap ripensata</span><h2>Dal display dell’auto verso l’ecosistema.</h2></div>
+<p>Le priorità partono dall’esperienza Android Auto e dai casi d’uso reali, non dalla quantità di PID visualizzati.</p>
+</div>
+<div class="roadmap">
+<div class="roadmap-step"><div class="roadmap-version">0.4</div><div><h3>Car foundation</h3><p>Modulo Car App Library, sessione Android Auto, design system automotive, test Desktop Head Unit, profili veicolo persistenti e selezione hardware affidabile.</p></div></div>
+<div class="roadmap-step"><div class="roadmap-version">0.5</div><div><h3>Travel e Urban</h3><p>Flussi viaggio, POI, parcheggio, meteo di tratta, restrizioni, avvisi vocali e stato veicolo sintetico costruiti nei template consentiti.</p></div></div>
+<div class="roadmap-step"><div class="roadmap-version">0.6</div><div><h3>Offroad sensor hub</h3><p>Inclinometro BLE, heading, quota, waypoint, modalità crawl e allarmi termici con calibrazione guidata.</p></div></div>
+<div class="roadmap-step"><div class="roadmap-version">0.7</div><div><h3>Camera module</h3><p>Astrazione per camere Wi-Fi, USB e IP, buffer locale, overlay traiettoria e output su superfici compatibili.</p></div></div>
+<div class="roadmap-step"><div class="roadmap-version">0.8</div><div><h3>Context intelligence</h3><p>Baseline del veicolo, stress termico, segnaletica e restrizioni, alert spiegabili e report di viaggio.</p></div></div>
+<div class="roadmap-step"><div class="roadmap-version">1.0</div><div><h3>Vehylo platform</h3><p>Profili comunitari verificati, hardware certificabile, API locali, Android Automotive OS e integrazioni per camper, 4x4, EV e flotte leggere.</p></div></div>
+</div>
+</div>
+</section><section class="section soft" id="faq">
+<div class="container">
+<div class="section-heading">
+<div><span class="section-kicker">FAQ</span><h2>Le risposte importanti.</h2></div>
+<p>Il progetto è ambizioso, ma il sito non nasconde vincoli tecnici, normativi o di compatibilità.</p>
+</div>
+<div class="faq">
+<details open=""><summary>Vehylo è già una dashboard completa su Android Auto?</summary><p>No. Il progetto dispone già di media Android Auto, telemetria e componenti companion. La nuova direzione prevede un modulo Car App Library e flussi compatibili con le categorie approvate. Le schermate del sito rappresentano l’esperienza obiettivo.</p></details>
+<details><summary>Perché non mostrare qualsiasi dashboard sul display?</summary><p>Android Auto non consente interfacce arbitrarie: app e funzioni devono appartenere a categorie supportate e usare template progettati per ridurre la distrazione. Vehylo struttura quindi le funzioni come navigazione/POI, IoT, meteo e media quando appropriato.</p></details>
+<details><summary>La camera sottoscocca potrà apparire sul display dell’auto?</summary><p>È una predisposizione di prodotto, ma il video live durante la guida dipende dalla piattaforma. Android Automotive OS, un display dedicato o il companion possono offrire una superficie più adatta. Android Auto standard può ricevere dati e avvisi consentiti.</p></details>
+<details><summary>La temperatura dell’olio cambio sarà disponibile su ogni auto?</summary><p>No. È spesso un segnale proprietario. Vehylo userà profili per marca, modello, motore e centralina, dichiarando quando il dato è verificato, sperimentale o assente.</p></details>
+<details><summary>Come funzionano ZTL, limiti e segnaletica?</summary><p>Attraverso provider compatibili, dati cartografici, fonti pubbliche o future elaborazioni on-device. Copertura, aggiornamento, normativa e precisione dovranno essere dichiarati chiaramente.</p></details>
+<details><summary>Qual è il ruolo del telefono?</summary><p>Configurazione hardware, permessi, Mapping Studio, log, diagnostica, manutenzione e calibrazione. Durante la guida il display dell’auto mostra soltanto le informazioni essenziali.</p></details>
+</div>
+</div>
+</section></main><footer><div class="container footer-grid"><div><div class="footer-brand">Vehylo</div><div>Vehicle intelligence progettata per Android Auto, Android Automotive OS e companion Android.</div></div><div class="footer-links"><a href="index.html">Home</a><a href="viaggio-urbano.html">Viaggio e città</a><a href="offroad.html">Offroad</a><a href="platform.html">Piattaforma</a></div></div></footer></body></html>
